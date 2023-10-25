@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from 'react';
-import { useTranslation } from 'next-i18next';
 import ConfirmationModal from '@components/ConfirmationModal';
+import { useTranslation } from 'next-i18next';
+import { FC, useEffect, useState } from 'react';
 
 interface Props {
   onChange: (active: boolean) => void;

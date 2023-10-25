@@ -1,7 +1,8 @@
-import * as path from 'path';
 import * as fs from 'fs';
+import * as path from 'path';
 import sinon from 'sinon';
 import tap from 'tap';
+import { isConnectionActive } from '../../src/controller/utils';
 import * as dbutils from '../../src/db/utils';
 import controllers from '../../src/index';
 import loadConnection from '../../src/loadConnection';
@@ -11,14 +12,13 @@ import {
   SAMLSSOConnectionWithEncodedMetadata,
   SAMLSSORecord,
 } from '../../src/typings';
+import { jacksonOptions } from '../utils';
 import {
   saml_connection,
   saml_connection_binding_absent,
   saml_connection_entityID_absent,
   saml_connection_invalid_sso_descriptor,
 } from './fixture';
-import { jacksonOptions } from '../utils';
-import { isConnectionActive } from '../../src/controller/utils';
 
 let connectionAPIController: IConnectionAPIController;
 

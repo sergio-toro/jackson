@@ -1,6 +1,6 @@
+import { LinkOutline } from '@components/LinkOutline';
 import ArrowTopRightOnSquareIcon from '@heroicons/react/20/solid/ArrowTopRightOnSquareIcon';
 import { useTranslation } from 'next-i18next';
-import { LinkOutline } from '@components/LinkOutline';
 
 const WellKnownURLs = () => {
   const { t } = useTranslation('common');

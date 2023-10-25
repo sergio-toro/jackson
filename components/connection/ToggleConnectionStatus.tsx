@@ -1,9 +1,9 @@
 import type { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
+import { ConnectionToggle } from '@components/ConnectionToggle';
 import { errorToast, successToast } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
 import { FC, useEffect, useState } from 'react';
 import type { ApiResponse } from 'types';
-import { useTranslation } from 'next-i18next';
-import { ConnectionToggle } from '@components/ConnectionToggle';
 
 interface Props {
   connection: SAMLSSORecord | OIDCSSORecord;

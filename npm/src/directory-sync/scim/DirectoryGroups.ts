@@ -1,18 +1,18 @@
 import type {
-  Group,
-  DirectorySyncResponse,
+  ApiError,
   Directory,
   DirectorySyncGroupMember,
   DirectorySyncRequest,
-  ApiError,
+  DirectorySyncResponse,
   EventCallback,
-  IDirectoryConfig,
-  IUsers,
-  IGroups,
+  Group,
   GroupPatchOperation,
+  IDirectoryConfig,
+  IGroups,
+  IUsers,
 } from '../../typings';
-import { parseGroupOperation } from './utils';
 import { sendEvent } from './events';
+import { parseGroupOperation } from './utils';
 
 interface DirectoryGroupsParams {
   directories: IDirectoryConfig;

@@ -1,22 +1,22 @@
+import type { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
+import Badge from '@components/Badge';
+import { InputWithCopyButton } from '@components/ClipboardButton';
+import EmptyState from '@components/EmptyState';
+import { IconButton } from '@components/IconButton';
+import { LinkPrimary } from '@components/LinkPrimary';
+import Loading from '@components/Loading';
+import { NoMoreResults, pageLimit, Pagination } from '@components/Pagination';
+import { errorToast } from '@components/Toaster';
 import LinkIcon from '@heroicons/react/24/outline/LinkIcon';
 import PencilIcon from '@heroicons/react/24/outline/PencilIcon';
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon';
-import EmptyState from '@components/EmptyState';
-import { useEffect } from 'react';
+import usePaginate from '@lib/ui/hooks/usePaginate';
+import { fetcher } from '@lib/ui/utils';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { LinkPrimary } from '@components/LinkPrimary';
-import { IconButton } from '@components/IconButton';
-import { InputWithCopyButton } from '@components/ClipboardButton';
-import { Pagination, pageLimit, NoMoreResults } from '@components/Pagination';
-import usePaginate from '@lib/ui/hooks/usePaginate';
-import type { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
+import { useEffect } from 'react';
 import useSWR from 'swr';
-import { fetcher } from '@lib/ui/utils';
-import Loading from '@components/Loading';
-import { errorToast } from '@components/Toaster';
 import type { ApiError, ApiSuccess } from 'types';
-import Badge from '@components/Badge';
 
 const ConnectionList = ({
   setupLinkToken,

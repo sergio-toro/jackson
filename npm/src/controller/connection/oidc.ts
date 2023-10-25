@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import * as dbutils from '../../db/utils';
 import {
   IConnectionAPIController,
   OIDCSSOConnectionWithDiscoveryUrl,
@@ -7,16 +8,15 @@ import {
   Storable,
   UpdateOIDCConnectionParams,
 } from '../../typings';
-import * as dbutils from '../../db/utils';
+import { JacksonError } from '../error';
 import {
   extractHostName,
   extractRedirectUrls,
   IndexNames,
-  validateSSOConnection,
   validateRedirectUrl,
+  validateSSOConnection,
   validateTenantAndProduct,
 } from '../utils';
-import { JacksonError } from '../error';
 
 const oidc = {
   create: async (

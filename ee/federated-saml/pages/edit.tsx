@@ -1,19 +1,18 @@
 import type { AdminPortalBranding, SAMLFederationApp } from '@boxyhq/saml-jackson';
-import { useEffect, useState } from 'react';
-import useSWR from 'swr';
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-
-import { fetcher } from '@lib/ui/utils';
+import { ButtonDanger } from '@components/ButtonDanger';
+import { ButtonPrimary } from '@components/ButtonPrimary';
+import ConfirmationModal from '@components/ConfirmationModal';
+import LicenseRequired from '@components/LicenseRequired';
+import { LinkBack } from '@components/LinkBack';
+import { LinkOutline } from '@components/LinkOutline';
 import Loading from '@components/Loading';
 import { errorToast, successToast } from '@components/Toaster';
-import ConfirmationModal from '@components/ConfirmationModal';
+import { fetcher } from '@lib/ui/utils';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import useSWR from 'swr';
 import type { ApiError, ApiResponse, ApiSuccess } from 'types';
-import { LinkBack } from '@components/LinkBack';
-import { ButtonPrimary } from '@components/ButtonPrimary';
-import { ButtonDanger } from '@components/ButtonDanger';
-import { LinkOutline } from '@components/LinkOutline';
-import LicenseRequired from '@components/LicenseRequired';
 
 const UpdateApp = ({ hasValidLicense }: { hasValidLicense: boolean }) => {
   const { t } = useTranslation('common');

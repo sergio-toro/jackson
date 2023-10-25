@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';
-import useSWR from 'swr';
-import { useRouter } from 'next/router';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { fetcher } from '@lib/ui/utils';
 import EditConnection from '@components/connection/EditConnection';
 import Loading from '@components/Loading';
 import { errorToast } from '@components/Toaster';
+import { fetcher } from '@lib/ui/utils';
+import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
 
 const ConnectionEditPage: NextPage = () => {
   const router = useRouter();

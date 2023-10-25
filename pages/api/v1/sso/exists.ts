@@ -1,6 +1,6 @@
+import type { GetConnectionsQuery } from '@boxyhq/saml-jackson';
 import jackson from '@lib/jackson';
 import { NextApiRequest, NextApiResponse } from 'next';
-import type { GetConnectionsQuery } from '@boxyhq/saml-jackson';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;

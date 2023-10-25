@@ -1,5 +1,5 @@
-import path from 'node:path';
 import { copyFileSync, existsSync, mkdirSync } from 'node:fs';
+import path from 'node:path';
 
 const TERMINUS_PATH = path.join('public', 'terminus');
 

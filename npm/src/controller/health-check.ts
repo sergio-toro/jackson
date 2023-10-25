@@ -1,5 +1,6 @@
 import { IHealthCheckController, Storable } from '../typings';
 import { JacksonError } from './error';
+
 const healthKey = 'amihealthy';
 const healthValue = 'fit';
 

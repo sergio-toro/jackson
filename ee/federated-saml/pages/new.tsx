@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
 import type { SAMLFederationApp } from '@boxyhq/saml-jackson';
-
-import type { ApiResponse } from 'types';
-import { LinkBack } from '@components/LinkBack';
 import { ButtonPrimary } from '@components/ButtonPrimary';
-import { errorToast, successToast } from '@components/Toaster';
 import LicenseRequired from '@components/LicenseRequired';
+import { LinkBack } from '@components/LinkBack';
+import { errorToast, successToast } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import type { ApiResponse } from 'types';
 
 const NewApp = ({ hasValidLicense }: { hasValidLicense: boolean }) => {
   const { t } = useTranslation('common');

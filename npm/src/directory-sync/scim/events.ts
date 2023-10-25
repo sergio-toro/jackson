@@ -1,16 +1,16 @@
-import type {
-  DirectorySyncEventType,
-  Directory,
-  User,
-  Group,
-  EventCallback,
-  DirectorySyncEvent,
-  IWebhookEventsLogger,
-  IDirectoryConfig,
-} from '../../typings';
-import { sendPayloadToWebhook } from '../../event/webhook';
-import { transformEventPayload } from './transform';
 import { isConnectionActive } from '../../controller/utils';
+import { sendPayloadToWebhook } from '../../event/webhook';
+import type {
+  Directory,
+  DirectorySyncEvent,
+  DirectorySyncEventType,
+  EventCallback,
+  Group,
+  IDirectoryConfig,
+  IWebhookEventsLogger,
+  User,
+} from '../../typings';
+import { transformEventPayload } from './transform';
 
 type Payload = { directory: Directory; group?: Group | null; user?: User | null };
 

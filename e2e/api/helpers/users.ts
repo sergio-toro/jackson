@@ -1,5 +1,5 @@
-import { expect, type APIRequestContext } from '@playwright/test';
 import type { Directory } from '@boxyhq/saml-jackson';
+import { expect, type APIRequestContext } from '@playwright/test';
 import users from '../../../npm/test/dsync/data/users';
 
 type User = (typeof users)[0];

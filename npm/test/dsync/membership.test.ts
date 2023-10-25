@@ -1,11 +1,11 @@
-import { IDirectorySyncController, Directory, Group, DirectorySyncEvent } from '../../src/typings';
 import tap from 'tap';
-import groups from './data/groups';
-import users from './data/users';
-import { default as usersRequest } from './data/user-requests';
-import { createGroupMembershipRequest } from './data/group-requests';
-import { getFakeDirectory } from './data/directories';
+import { Directory, DirectorySyncEvent, Group, IDirectorySyncController } from '../../src/typings';
 import { jacksonOptions } from '../utils';
+import { getFakeDirectory } from './data/directories';
+import { createGroupMembershipRequest } from './data/group-requests';
+import groups from './data/groups';
+import { default as usersRequest } from './data/user-requests';
+import users from './data/users';
 
 const fakeDirectory = getFakeDirectory();
 let directorySync: IDirectorySyncController;

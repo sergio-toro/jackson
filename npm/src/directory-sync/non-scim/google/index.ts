@@ -1,6 +1,6 @@
-import { GoogleAuth } from './oauth';
-import { GoogleProvider } from './api';
 import type { IDirectoryConfig, JacksonOption } from '../../../typings';
+import { GoogleProvider } from './api';
+import { GoogleAuth } from './oauth';
 
 interface NewGoogleProviderParams {
   directories: IDirectoryConfig;

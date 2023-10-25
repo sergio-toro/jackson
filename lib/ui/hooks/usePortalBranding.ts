@@ -1,6 +1,6 @@
+import { fetcher } from '@lib/ui/utils';
 import useSWR from 'swr';
 import type { ApiError, ApiSuccess } from 'types';
-import { fetcher } from '@lib/ui/utils';
 
 const usePortalBranding = () => {
   const url = '/api/branding';

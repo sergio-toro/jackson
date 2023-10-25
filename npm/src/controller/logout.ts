@@ -1,16 +1,15 @@
 import crypto from 'crypto';
 import { promisify } from 'util';
+import { deflateRaw } from 'zlib';
+import saml from '@boxyhq/saml20';
 import xml2js from 'xml2js';
 import xmlbuilder from 'xmlbuilder';
-import { deflateRaw } from 'zlib';
 import * as dbutils from '../db/utils';
-
-import saml from '@boxyhq/saml20';
+import { getDefaultCertificate } from '../saml/x509';
 import { JacksonOption, SAMLConnection, SAMLResponsePayload, SLORequestParams, Storable } from '../typings';
 import { JacksonError } from './error';
 import * as redirect from './oauth/redirect';
 import { IndexNames } from './utils';
-import { getDefaultCertificate } from '../saml/x509';
 
 const deflateRawAsync = promisify(deflateRaw);
 

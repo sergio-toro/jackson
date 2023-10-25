@@ -1,12 +1,12 @@
 import type {
   Directory,
-  User,
-  IUsers,
-  IRequestHandler,
   DirectorySyncRequest,
   EventCallback,
   IDirectoryProvider,
+  IRequestHandler,
+  IUsers,
   PaginationParams,
+  User,
 } from '../../typings';
 import { compareAndFindDeletedUsers, isUserUpdated, toUserSCIMPayload } from './utils';
 

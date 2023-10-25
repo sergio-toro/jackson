@@ -1,4 +1,4 @@
-import type { Storable, AdminPortalBranding, JacksonOption } from '../../typings';
+import type { AdminPortalBranding, JacksonOption, Storable } from '../../typings';
 import { throwIfInvalidLicense } from '../common/checkLicense';
 
 export class BrandingController {

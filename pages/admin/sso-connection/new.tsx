@@ -1,5 +1,5 @@
-import type { GetServerSidePropsContext, NextPage } from 'next';
 import CreateConnection from '@components/connection/CreateConnection';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const NewConnection: NextPage = () => {

@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-import getRawBody from 'raw-body';
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
 import type { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
-import type { InferGetServerSidePropsType } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import jackson from '@lib/jackson';
-import Head from 'next/head';
-import { hexToHsl, darkenHslColor } from '@lib/color';
-import Image from 'next/image';
 import { PoweredBy } from '@components/PoweredBy';
+import { darkenHslColor, hexToHsl } from '@lib/color';
+import jackson from '@lib/jackson';
 import { getPortalBranding } from '@lib/settings';
+import type { InferGetServerSidePropsType } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import getRawBody from 'raw-body';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ChooseIdPConnection({
   connections,

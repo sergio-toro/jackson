@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
 import AddProject from '@components/retraced/AddProject';
+import type { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const NewProject: NextPage = () => {

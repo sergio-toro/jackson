@@ -1,15 +1,14 @@
 import _ from 'lodash';
-
 import type {
   Directory,
-  IGroups,
-  Group,
-  IRequestHandler,
   DirectorySyncRequest,
   EventCallback,
-  IDirectoryProvider,
-  PaginationParams,
+  Group,
   GroupMembership,
+  IDirectoryProvider,
+  IGroups,
+  IRequestHandler,
+  PaginationParams,
 } from '../../typings';
 import {
   compareAndFindDeletedMembers,

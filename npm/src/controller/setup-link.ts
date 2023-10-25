@@ -1,15 +1,15 @@
+import crypto from 'crypto';
+import * as dbutils from '../db/utils';
 import {
+  Index,
+  PaginationParams,
   SetupLink,
   SetupLinkCreatePayload,
-  Storable,
-  PaginationParams,
   SetupLinkService,
-  Index,
+  Storable,
 } from '../typings';
-import * as dbutils from '../db/utils';
-import { IndexNames, validateTenantAndProduct, validateRedirectUrl, extractRedirectUrls } from './utils';
-import crypto from 'crypto';
 import { JacksonError } from './error';
+import { extractRedirectUrls, IndexNames, validateRedirectUrl, validateTenantAndProduct } from './utils';
 
 interface FilterByParams extends PaginationParams {
   service?: SetupLinkService;

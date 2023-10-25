@@ -1,15 +1,15 @@
-import type { DatabaseStore, JacksonOption, IEventController, EventCallback } from '../typings';
-import { DirectoryConfig } from './scim/DirectoryConfig';
-import { DirectoryUsers } from './scim/DirectoryUsers';
-import { DirectoryGroups } from './scim/DirectoryGroups';
-import { Users } from './scim/Users';
-import { Groups } from './scim/Groups';
-import { getDirectorySyncProviders } from './scim/utils';
-import { RequestHandler } from './request';
-import { handleEventCallback } from './scim/events';
-import { WebhookEventsLogger } from './scim/WebhookEventsLogger';
-import { newGoogleProvider } from './non-scim/google';
+import type { DatabaseStore, EventCallback, IEventController, JacksonOption } from '../typings';
 import { startSync } from './non-scim';
+import { newGoogleProvider } from './non-scim/google';
+import { RequestHandler } from './request';
+import { DirectoryConfig } from './scim/DirectoryConfig';
+import { DirectoryGroups } from './scim/DirectoryGroups';
+import { DirectoryUsers } from './scim/DirectoryUsers';
+import { handleEventCallback } from './scim/events';
+import { Groups } from './scim/Groups';
+import { Users } from './scim/Users';
+import { getDirectorySyncProviders } from './scim/utils';
+import { WebhookEventsLogger } from './scim/WebhookEventsLogger';
 
 const directorySync = async (params: {
   db: DatabaseStore;

@@ -1,16 +1,16 @@
-import { useState, type ReactElement } from 'react';
-import type { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useSession, getCsrfToken, signIn, SessionProvider } from 'next-auth/react';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { errorToast, successToast } from '@components/Toaster';
+import { Login as SSOLogin } from '@boxyhq/react-ui/sso';
 import { ButtonOutline } from '@components/ButtonOutline';
 import Loading from '@components/Loading';
-import { Login as SSOLogin } from '@boxyhq/react-ui/sso';
+import { errorToast, successToast } from '@components/Toaster';
 import { adminPortalSSODefaults } from '@lib/env';
+import type { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
+import { getCsrfToken, SessionProvider, signIn, useSession } from 'next-auth/react';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState, type ReactElement } from 'react';
 
 const Login = ({
   csrfToken,

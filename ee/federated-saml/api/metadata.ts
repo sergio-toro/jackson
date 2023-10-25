@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import jackson from '@lib/jackson';
 import stream from 'stream';
 import { promisify } from 'util';
+import jackson from '@lib/jackson';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 const pipeline = promisify(stream.pipeline);
 

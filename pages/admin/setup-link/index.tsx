@@ -1,8 +1,8 @@
-import type { GetServerSidePropsContext, NextPage } from 'next';
+import type { SetupLinkService } from '@boxyhq/saml-jackson';
 import SetupLinkList from '@components/setup-link/SetupLinkList';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
-import type { SetupLinkService } from '@boxyhq/saml-jackson';
 
 const SetupLinksIndexPage: NextPage = () => {
   const router = useRouter();

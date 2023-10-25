@@ -1,10 +1,10 @@
 import { ButtonLink } from '@components/ButtonLink';
+import { CopyToClipboardButton } from '@components/ClipboardButton';
+import { IconButton } from '@components/IconButton';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'next-i18next';
 import { Dispatch, FormEvent, SetStateAction, useMemo, useState } from 'react';
 import { EditViewOnlyFields, getCommonFields } from './fieldCatalog';
-import { CopyToClipboardButton } from '@components/ClipboardButton';
-import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
-import { IconButton } from '@components/IconButton';
-import { useTranslation } from 'next-i18next';
 
 export const saveConnection = async ({
   formObj,

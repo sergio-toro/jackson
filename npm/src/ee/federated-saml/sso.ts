@@ -1,12 +1,11 @@
 import saml from '@boxyhq/saml20';
-
-import { App } from './app';
 import { JacksonError } from '../../controller/error';
 import { SAMLHandler } from '../../controller/saml-handler';
-import type { JacksonOption, SAMLSSORecord, SAMLTracerInstance } from '../../typings';
-import { extractSAMLRequestAttributes } from '../../saml/lib';
 import { getErrorMessage, isConnectionActive } from '../../controller/utils';
+import { extractSAMLRequestAttributes } from '../../saml/lib';
+import type { JacksonOption, SAMLSSORecord, SAMLTracerInstance } from '../../typings';
 import { throwIfInvalidLicense } from '../common/checkLicense';
+import { App } from './app';
 
 export class SSO {
   private app: App;

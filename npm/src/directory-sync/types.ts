@@ -1,12 +1,12 @@
 import directorySync from '.';
+import { ApiError } from '../typings';
+import { RequestHandler } from './request';
 import { DirectoryConfig } from './scim/DirectoryConfig';
 import { DirectoryGroups } from './scim/DirectoryGroups';
 import { DirectoryUsers } from './scim/DirectoryUsers';
-import { Users } from './scim/Users';
 import { Groups } from './scim/Groups';
+import { Users } from './scim/Users';
 import { WebhookEventsLogger } from './scim/WebhookEventsLogger';
-import { ApiError } from '../typings';
-import { RequestHandler } from './request';
 
 export type IDirectorySyncController = Awaited<ReturnType<typeof directorySync>>;
 export type IDirectoryConfig = InstanceType<typeof DirectoryConfig>;

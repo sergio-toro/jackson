@@ -1,11 +1,11 @@
 import type {
   Directory,
-  IGroups,
-  Group,
-  IRequestHandler,
   DirectorySyncRequest,
   EventCallback,
+  Group,
   IDirectoryProvider,
+  IGroups,
+  IRequestHandler,
   PaginationParams,
 } from '../../typings';
 import { compareAndFindDeletedGroups, isGroupUpdated, toGroupSCIMPayload } from './utils';

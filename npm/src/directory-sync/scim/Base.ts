@@ -1,5 +1,5 @@
-import type { Storable, DatabaseStore } from '../../typings';
 import { storeNamespacePrefix } from '../../controller/utils';
+import type { DatabaseStore, Storable } from '../../typings';
 
 export class Base {
   protected db: DatabaseStore;

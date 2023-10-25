@@ -1,12 +1,12 @@
-import Adapter from '@lib/nextAuthAdapter';
-import NextAuth from 'next-auth';
-import EmailProvider from 'next-auth/providers/email';
-import CredentialsProvider from 'next-auth/providers/credentials';
-import BoxyHQSAMLProvider from 'next-auth/providers/boxyhq-saml';
-import jackson from '@lib/jackson';
-import { validateEmailWithACL } from '@lib/utils';
-import { jacksonOptions as env } from '@lib/env';
 import { sessionName } from '@lib/constants';
+import { jacksonOptions as env } from '@lib/env';
+import jackson from '@lib/jackson';
+import Adapter from '@lib/nextAuthAdapter';
+import { validateEmailWithACL } from '@lib/utils';
+import NextAuth from 'next-auth';
+import BoxyHQSAMLProvider from 'next-auth/providers/boxyhq-saml';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import EmailProvider from 'next-auth/providers/email';
 
 export default NextAuth({
   theme: {

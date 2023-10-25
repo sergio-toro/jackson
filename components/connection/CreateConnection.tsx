@@ -1,21 +1,21 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import {
-  saveConnection,
-  fieldCatalogFilterByConnection,
-  renderFieldList,
-  useFieldCatalog,
-  excludeFallback,
-  type AdminPortalSSODefaults,
-  type FormObj,
-  type FieldCatalogItem,
-} from './utils';
-import { mutate } from 'swr';
-import { ApiResponse } from 'types';
-import { errorToast } from '@components/Toaster';
-import { useTranslation } from 'next-i18next';
 import { ButtonPrimary } from '@components/ButtonPrimary';
 import { LinkBack } from '@components/LinkBack';
+import { errorToast } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { mutate } from 'swr';
+import { ApiResponse } from 'types';
+import {
+  excludeFallback,
+  fieldCatalogFilterByConnection,
+  renderFieldList,
+  saveConnection,
+  useFieldCatalog,
+  type AdminPortalSSODefaults,
+  type FieldCatalogItem,
+  type FormObj,
+} from './utils';
 
 function getInitialState(connectionType, fieldCatalog: FieldCatalogItem[]) {
   const _state = {};

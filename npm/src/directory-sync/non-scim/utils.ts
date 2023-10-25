@@ -1,7 +1,6 @@
-import _ from 'lodash';
 import crypto from 'crypto';
-
-import type { User, Group } from '../../typings';
+import _ from 'lodash';
+import type { Group, User } from '../../typings';
 
 export const toUserSCIMPayload = (user: User) => {
   return {

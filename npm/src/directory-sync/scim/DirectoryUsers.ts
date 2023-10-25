@@ -1,16 +1,16 @@
 import type {
-  Directory,
-  DirectorySyncResponse,
-  DirectorySyncRequest,
-  User,
   ApiError,
+  Directory,
+  DirectorySyncRequest,
+  DirectorySyncResponse,
   EventCallback,
   IDirectoryConfig,
   IUsers,
+  User,
   UserPatchOperation,
 } from '../../typings';
-import { parseUserPatchRequest, extractStandardUserAttributes, updateRawUserAttributes } from './utils';
 import { sendEvent } from './events';
+import { extractStandardUserAttributes, parseUserPatchRequest, updateRawUserAttributes } from './utils';
 
 interface DirectoryUsersParams {
   directories: IDirectoryConfig;

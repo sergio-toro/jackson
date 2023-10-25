@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
-import { createDirectory, deleteDirectory, directoryPayload, getDirectory } from '../../helpers/directories';
-import { createUser, getUser } from '../../helpers/users';
-import { createGroup, getGroupByDisplayName, getGroupById } from '../../helpers/groups';
+import { expect, test } from '@playwright/test';
 import groups from '../../../../npm/test/dsync/data/groups';
 import users from '../../../../npm/test/dsync/data/users';
+import { createDirectory, deleteDirectory, directoryPayload, getDirectory } from '../../helpers/directories';
+import { createGroup, getGroupByDisplayName, getGroupById } from '../../helpers/groups';
+import { createUser, getUser } from '../../helpers/users';
 
 test.use({
   extraHTTPHeaders: {

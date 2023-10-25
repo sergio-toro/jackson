@@ -1,8 +1,8 @@
-import tap from 'tap';
 import sinon from 'sinon';
-import controllers from '../../src/index';
-import { jacksonOptions } from '../utils';
+import tap from 'tap';
 import EventController from '../../src/event';
+import { transformDirectoryConnection, transformSAMLSSOConnection } from '../../src/event/utils';
+import controllers from '../../src/index';
 import type {
   EventPayloadSchema,
   EventType,
@@ -11,9 +11,9 @@ import type {
   SAMLSSOConnectionWithEncodedMetadata,
   SAMLSSORecord,
 } from '../../src/typings';
-import { saml_connection } from '../sso/fixture';
-import { transformDirectoryConnection, transformSAMLSSOConnection } from '../../src/event/utils';
 import { getFakeDirectory } from '../dsync/data/directories';
+import { saml_connection } from '../sso/fixture';
+import { jacksonOptions } from '../utils';
 
 let ssoConnectionController: IConnectionAPIController;
 let directoryConnectionController: IDirectorySyncController['directories'];

@@ -1,17 +1,16 @@
-import type { AppProps } from 'next/app';
-import type { Session } from 'next-auth';
-import type { NextPage } from 'next';
-import { SessionProvider } from 'next-auth/react';
-import { useRouter } from 'next/router';
-import { Toaster } from '@components/Toaster';
-import { appWithTranslation } from 'next-i18next';
-import { ReactElement, ReactNode } from 'react';
-import micromatch from 'micromatch';
 import nextI18NextConfig from '../next-i18next.config.js';
-
-import { AccountLayout, SetupLinkLayout } from '@components/layouts';
-import '@boxyhq/react-ui/dist/style.css';
 import '../styles/globals.css';
+import '@boxyhq/react-ui/dist/style.css';
+import { AccountLayout, SetupLinkLayout } from '@components/layouts';
+import { Toaster } from '@components/Toaster';
+import micromatch from 'micromatch';
+import type { NextPage } from 'next';
+import type { Session } from 'next-auth';
+import { SessionProvider } from 'next-auth/react';
+import { appWithTranslation } from 'next-i18next';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { ReactElement, ReactNode } from 'react';
 
 const unauthenticatedRoutes = [
   '/',

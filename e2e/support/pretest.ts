@@ -1,6 +1,6 @@
 import { createHash } from 'crypto';
 import { initNextAuthDB } from '@lib/nextAuthAdapter';
-import { IDENTIFIER as identifier, EXPIRES as expires, TOKEN as token } from './nextAuth.constants';
+import { EXPIRES as expires, IDENTIFIER as identifier, TOKEN as token } from './nextAuth.constants';
 
 export function hashToken(token: string) {
   return createHash('sha256').update(`${token}${process.env.NEXTAUTH_SECRET}`).digest('hex');

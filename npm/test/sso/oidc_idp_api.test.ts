@@ -1,5 +1,6 @@
 import sinon from 'sinon';
 import tap from 'tap';
+import { isConnectionActive } from '../../src/controller/utils';
 import * as dbutils from '../../src/db/utils';
 import controllers from '../../src/index';
 import {
@@ -7,9 +8,8 @@ import {
   OIDCSSOConnectionWithDiscoveryUrl,
   OIDCSSORecord,
 } from '../../src/typings';
-import { oidc_connection } from './fixture';
 import { jacksonOptions } from '../utils';
-import { isConnectionActive } from '../../src/controller/utils';
+import { oidc_connection } from './fixture';
 
 let connectionAPIController: IConnectionAPIController;
 

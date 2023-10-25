@@ -1,9 +1,9 @@
-import { GetByProductParams, Records, Storable } from '../typings';
 import { generateMnemonic } from '@boxyhq/error-code-mnemonic';
+import { JacksonError } from '../controller/error';
 import { IndexNames } from '../controller/utils';
 import { keyFromParts } from '../db/utils';
+import { GetByProductParams, Records, Storable } from '../typings';
 import type { SAMLTrace, Trace } from './types';
-import { JacksonError } from '../controller/error';
 
 const INTERVAL_1_WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const INTERVAL_1_DAY_MS = 24 * 60 * 60 * 1000;

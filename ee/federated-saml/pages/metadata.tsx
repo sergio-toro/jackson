@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
 import type { SAMLFederationAppWithMetadata } from '@boxyhq/saml-jackson';
-import { Toaster } from '@components/Toaster';
-import { InputWithCopyButton, CopyToClipboardButton } from '@components/ClipboardButton';
-import { LinkOutline } from '@components/LinkOutline';
+import { CopyToClipboardButton, InputWithCopyButton } from '@components/ClipboardButton';
 import LicenseRequired from '@components/LicenseRequired';
+import { LinkOutline } from '@components/LinkOutline';
+import { Toaster } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 type MetadataProps = {
   metadata: Pick<SAMLFederationAppWithMetadata, 'metadata'>['metadata'];

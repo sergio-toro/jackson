@@ -1,7 +1,6 @@
 import tap from 'tap';
-
+import { Directory, DirectoryType, IDirectorySyncController } from '../../src/typings';
 import { jacksonOptions } from '../utils';
-import { IDirectorySyncController, DirectoryType, Directory } from '../../src/typings';
 
 let directory: Directory;
 let directorySyncController: IDirectorySyncController;

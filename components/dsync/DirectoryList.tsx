@@ -1,23 +1,23 @@
+import type { Directory } from '@boxyhq/saml-jackson';
+import Badge from '@components/Badge';
 import EmptyState from '@components/EmptyState';
+import { IconButton } from '@components/IconButton';
+import { LinkPrimary } from '@components/LinkPrimary';
+import Loading from '@components/Loading';
+import { NoMoreResults, pageLimit, Pagination } from '@components/Pagination';
+import { errorToast } from '@components/Toaster';
 import EyeIcon from '@heroicons/react/24/outline/EyeIcon';
 import LinkIcon from '@heroicons/react/24/outline/LinkIcon';
 import PencilIcon from '@heroicons/react/24/outline/PencilIcon';
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon';
-import { useEffect } from 'react';
-import type { Directory } from '@boxyhq/saml-jackson';
-import { useTranslation } from 'next-i18next';
-import { LinkPrimary } from '@components/LinkPrimary';
-import { IconButton } from '@components/IconButton';
-import { useRouter } from 'next/router';
-import { pageLimit, Pagination, NoMoreResults } from '@components/Pagination';
 import useDirectoryProviders from '@lib/ui/hooks/useDirectoryProviders';
-import useSWR from 'swr';
-import type { ApiError, ApiSuccess } from 'types';
 import usePaginate from '@lib/ui/hooks/usePaginate';
 import { fetcher } from '@lib/ui/utils';
-import Loading from '@components/Loading';
-import { errorToast } from '@components/Toaster';
-import Badge from '@components/Badge';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
 
 const DirectoryList = ({ setupLinkToken }: { setupLinkToken?: string }) => {
   const { t } = useTranslation('common');

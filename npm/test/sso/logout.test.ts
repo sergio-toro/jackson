@@ -3,10 +3,10 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import sinon from 'sinon';
 import tap from 'tap';
-import { IConnectionAPIController, ILogoutController } from '../../src/typings';
 import { relayStatePrefix } from '../../src/controller/utils';
-import { saml_connection } from './fixture';
+import { IConnectionAPIController, ILogoutController } from '../../src/typings';
 import { addSSOConnections, jacksonOptions } from '../utils';
+import { saml_connection } from './fixture';
 
 let connectionAPIController: IConnectionAPIController;
 let logoutController: ILogoutController;

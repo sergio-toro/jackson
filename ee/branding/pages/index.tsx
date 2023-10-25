@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'next-i18next';
-import { ButtonPrimary } from '@components/ButtonPrimary';
-import { errorToast, successToast } from '@components/Toaster';
-import type { ApiResponse } from 'types';
 import type { AdminPortalBranding } from '@boxyhq/saml-jackson';
+import { ButtonPrimary } from '@components/ButtonPrimary';
 import LicenseRequired from '@components/LicenseRequired';
+import { errorToast, successToast } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
+import { useEffect, useState } from 'react';
+import type { ApiResponse } from 'types';
 
 const Branding = ({ hasValidLicense }: { hasValidLicense: boolean }) => {
   const { t } = useTranslation('common');

@@ -1,8 +1,7 @@
-import useSWR from 'swr';
-
-import type { ApiError, ApiSuccess } from 'types';
-import type { Project, Group } from 'types/retraced';
 import { fetcher } from '@lib/ui/utils';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
+import type { Group, Project } from 'types/retraced';
 
 export const useProject = (projectId: string) => {
   const { data, error, isLoading } = useSWR<ApiSuccess<{ project: Project }>, ApiError>(

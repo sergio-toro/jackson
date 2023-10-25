@@ -1,19 +1,18 @@
 import crypto from 'crypto';
 import * as jose from 'jose';
 import { Client, TokenSet } from 'openid-client';
-
 import * as dbutils from '../db/utils';
 import type {
   ConnectionType,
+  Directory,
   OAuthErrorHandlerParams,
-  SAMLSSOConnectionWithEncodedMetadata,
-  SAMLSSOConnectionWithRawMetadata,
   OIDCSSOConnectionWithDiscoveryUrl,
   OIDCSSOConnectionWithMetadata,
-  Profile,
-  SAMLSSORecord,
   OIDCSSORecord,
-  Directory,
+  Profile,
+  SAMLSSOConnectionWithEncodedMetadata,
+  SAMLSSOConnectionWithRawMetadata,
+  SAMLSSORecord,
 } from '../typings';
 import { JacksonError } from './error';
 import * as redirect from './oauth/redirect';

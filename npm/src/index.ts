@@ -1,23 +1,23 @@
-import type { IDirectorySyncController, JacksonOption } from './typings';
-import DB from './db/db';
-import defaultDb from './db/defaultDb';
-import loadConnection from './loadConnection';
 import { AdminController } from './controller/admin';
+import { AnalyticsController } from './controller/analytics';
 import { ConnectionAPIController } from './controller/api';
-import { OAuthController } from './controller/oauth';
 import { HealthCheckController } from './controller/health-check';
 import { LogoutController } from './controller/logout';
-import initDirectorySync from './directory-sync';
+import { OAuthController } from './controller/oauth';
 import { OidcDiscoveryController } from './controller/oidc-discovery';
-import { SPSAMLConfig } from './controller/sp-config';
 import { SetupLinkController } from './controller/setup-link';
-import { AnalyticsController } from './controller/analytics';
-import * as x509 from './saml/x509';
-import initFederatedSAML, { type ISAMLFederationController } from './ee/federated-saml';
-import checkLicense from './ee/common/checkLicense';
+import { SPSAMLConfig } from './controller/sp-config';
+import DB from './db/db';
+import defaultDb from './db/defaultDb';
+import initDirectorySync from './directory-sync';
 import { BrandingController } from './ee/branding';
-import SAMLTracer from './saml-tracer';
+import checkLicense from './ee/common/checkLicense';
+import initFederatedSAML, { type ISAMLFederationController } from './ee/federated-saml';
 import EventController from './event';
+import loadConnection from './loadConnection';
+import SAMLTracer from './saml-tracer';
+import * as x509 from './saml/x509';
+import type { IDirectorySyncController, JacksonOption } from './typings';
 
 const defaultOpts = (opts: JacksonOption): JacksonOption => {
   const newOpts = {

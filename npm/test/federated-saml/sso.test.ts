@@ -1,22 +1,21 @@
-import tap from 'tap';
+import { promises as fs } from 'fs';
 import path from 'path';
-import sinon from 'sinon';
 import { promisify } from 'util';
 import { deflateRaw } from 'zlib';
 import saml from '@boxyhq/saml20';
-import { promises as fs } from 'fs';
-
-const deflateRawAsync = promisify(deflateRaw);
-
-import { jacksonOptions } from '../utils';
-import { tenant, product, serviceProvider } from './constants';
+import sinon from 'sinon';
+import tap from 'tap';
 import type {
-  ISAMLFederationController,
   IConnectionAPIController,
   IOAuthController,
+  ISAMLFederationController,
   SAMLFederationApp,
   SAMLSSORecord,
 } from '../../src';
+import { jacksonOptions } from '../utils';
+import { product, serviceProvider, tenant } from './constants';
+
+const deflateRawAsync = promisify(deflateRaw);
 
 let oauthController: IOAuthController;
 let samlFederatedController: ISAMLFederationController;

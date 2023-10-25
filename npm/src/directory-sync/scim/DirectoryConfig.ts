@@ -1,30 +1,29 @@
 import { randomUUID } from 'crypto';
-
-import type {
-  Storable,
-  Directory,
-  JacksonOption,
-  DatabaseStore,
-  DirectoryType,
-  PaginationParams,
-  IUsers,
-  IGroups,
-  IWebhookEventsLogger,
-  IEventController,
-  Response,
-  Index,
-} from '../../typings';
-import * as dbutils from '../../db/utils';
+import { apiError, JacksonError } from '../../controller/error';
 import {
   createRandomSecret,
-  isConnectionActive,
-  validateTenantAndProduct,
-  storeNamespacePrefix,
   IndexNames,
+  isConnectionActive,
+  storeNamespacePrefix,
+  validateTenantAndProduct,
 } from '../../controller/utils';
-import { apiError, JacksonError } from '../../controller/error';
-import { getDirectorySyncProviders, isSCIMEnabledProvider } from './utils';
+import * as dbutils from '../../db/utils';
 import * as metrics from '../../opentelemetry/metrics';
+import type {
+  DatabaseStore,
+  Directory,
+  DirectoryType,
+  IEventController,
+  IGroups,
+  Index,
+  IUsers,
+  IWebhookEventsLogger,
+  JacksonOption,
+  PaginationParams,
+  Response,
+  Storable,
+} from '../../typings';
+import { getDirectorySyncProviders, isSCIMEnabledProvider } from './utils';
 
 interface DirectoryConfigParams {
   db: DatabaseStore;

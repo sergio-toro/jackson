@@ -1,6 +1,6 @@
-import { Storable } from '../typings';
-import Mixpanel from 'mixpanel';
 import { randomUUID } from 'crypto';
+import Mixpanel from 'mixpanel';
+import { Storable } from '../typings';
 
 const idKey = 'heartbeat';
 const sentKey = 'lastSent';

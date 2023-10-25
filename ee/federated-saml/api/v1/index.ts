@@ -1,7 +1,6 @@
 import { AppRequestParams } from '@boxyhq/saml-jackson';
-import { NextApiRequest, NextApiResponse } from 'next';
-
 import jackson from '@lib/jackson';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

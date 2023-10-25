@@ -1,5 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import micromatch from 'micromatch';
 import type {
   Directory,
   OIDCSSOConnectionWithDiscoveryUrl,
@@ -7,6 +5,8 @@ import type {
   OIDCSSORecord,
   SAMLSSORecord,
 } from '@boxyhq/saml-jackson';
+import micromatch from 'micromatch';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { JacksonError } from 'npm/src/controller/error';
 
 export const validateEmailWithACL = (email: string) => {

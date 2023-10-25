@@ -1,14 +1,13 @@
-import type { GetServerSidePropsContext, NextPage } from 'next';
-import useSWR from 'swr';
-import { useRouter } from 'next/router';
-
-import { fetcher } from '@lib/ui/utils';
-import EditConnection from '@components/connection/EditConnection';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import type { ApiError, ApiSuccess } from 'types';
-import Loading from '@components/Loading';
 import { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
+import EditConnection from '@components/connection/EditConnection';
+import Loading from '@components/Loading';
 import { errorToast } from '@components/Toaster';
+import { fetcher } from '@lib/ui/utils';
+import type { GetServerSidePropsContext, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
 
 const ConnectionEditPage: NextPage = () => {
   const router = useRouter();

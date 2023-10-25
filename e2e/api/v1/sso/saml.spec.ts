@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import {
   createConnection,
-  getConnection,
   deleteConnection,
+  expectedConnection,
+  getConnection,
   getRawMetadata,
   newConnection,
-  expectedConnection,
 } from '../../helpers/sso';
 
 test.use({

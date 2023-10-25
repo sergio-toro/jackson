@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { LinkBack } from '@components/LinkBack';
+import { errorToast, successToast } from '@components/Toaster';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import { successToast, errorToast } from '@components/Toaster';
-import { LinkBack } from '@components/LinkBack';
+import { useState } from 'react';
 
 const AddProject = () => {
   const router = useRouter();

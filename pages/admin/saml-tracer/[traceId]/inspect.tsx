@@ -1,18 +1,18 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
 import type { SAMLTrace } from '@boxyhq/saml-jackson';
+import { CopyToClipboardButton } from '@components/ClipboardButton';
+import { LinkBack } from '@components/LinkBack';
+import Loading from '@components/Loading';
+import { errorToast } from '@components/Toaster';
+import { fetcher } from '@lib/ui/utils';
+import { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+import { Badge } from 'react-daisyui';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import useSWR from 'swr';
-import { ApiSuccess, ApiError } from 'types';
-import { fetcher } from '@lib/ui/utils';
-import { errorToast } from '@components/Toaster';
-import Loading from '@components/Loading';
-import { useTranslation } from 'next-i18next';
-import { LinkBack } from '@components/LinkBack';
-import { Badge } from 'react-daisyui';
-import { CopyToClipboardButton } from '@components/ClipboardButton';
+import { ApiError, ApiSuccess } from 'types';
 
 const DescriptionListItem = ({ term, value }: { term: string; value: string | JSX.Element }) => (
   <div className='px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6'>

@@ -1,8 +1,8 @@
-import type { GetServerSidePropsContext, NextPage } from 'next';
 import CreateConnection from '@components/connection/CreateConnection';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { AdminPortalSSODefaults } from '@components/connection/utils';
 import { adminPortalSSODefaults } from '@lib/env';
+import type { GetServerSidePropsContext, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 type Props = {
   adminPortalSSODefaults: AdminPortalSSODefaults;

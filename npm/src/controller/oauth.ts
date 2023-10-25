@@ -1,47 +1,45 @@
 import crypto from 'crypto';
-import * as jose from 'jose';
 import { promisify } from 'util';
 import { deflateRaw } from 'zlib';
 import saml from '@boxyhq/saml20';
-import { errors, generators } from 'openid-client';
 import { SAMLProfile } from '@boxyhq/saml20/dist/typings';
-
+import * as jose from 'jose';
+import { errors, generators } from 'openid-client';
+import * as metrics from '../opentelemetry/metrics';
+import { extractSAMLResponseAttributes } from '../saml/lib';
+import { getDefaultCertificate } from '../saml/x509';
 import type {
-  OIDCAuthzResponsePayload,
   IOAuthController,
   JacksonOption,
   OAuthReq,
   OAuthTokenReq,
   OAuthTokenRes,
+  OIDCAuthzResponsePayload,
+  OIDCSSORecord,
   Profile,
   SAMLResponsePayload,
-  Storable,
   SAMLSSORecord,
-  OIDCSSORecord,
   SAMLTracerInstance,
+  Storable,
 } from '../typings';
-import {
-  relayStatePrefix,
-  IndexNames,
-  OAuthErrorResponse,
-  getErrorMessage,
-  loadJWSPrivateKey,
-  isJWSKeyPairLoaded,
-  extractOIDCUserProfile,
-  getScopeValues,
-  getEncodedTenantProduct,
-  isConnectionActive,
-} from './utils';
-
-import * as metrics from '../opentelemetry/metrics';
 import { JacksonError } from './error';
 import * as allowed from './oauth/allowed';
 import * as codeVerifier from './oauth/code-verifier';
-import * as redirect from './oauth/redirect';
-import { getDefaultCertificate } from '../saml/x509';
-import { SAMLHandler } from './saml-handler';
-import { extractSAMLResponseAttributes } from '../saml/lib';
 import { oidcIssuerInstance } from './oauth/oidc-issuer';
+import * as redirect from './oauth/redirect';
+import { SAMLHandler } from './saml-handler';
+import {
+  extractOIDCUserProfile,
+  getEncodedTenantProduct,
+  getErrorMessage,
+  getScopeValues,
+  IndexNames,
+  isConnectionActive,
+  isJWSKeyPairLoaded,
+  loadJWSPrivateKey,
+  OAuthErrorResponse,
+  relayStatePrefix,
+} from './utils';
 
 const deflateRawAsync = promisify(deflateRaw);
 

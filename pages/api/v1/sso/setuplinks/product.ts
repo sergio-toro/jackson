@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import type { SetupLinkService } from '@boxyhq/saml-jackson';
 import jackson from '@lib/jackson';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 const service: SetupLinkService = 'sso';
 

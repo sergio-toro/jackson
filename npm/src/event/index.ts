@@ -1,20 +1,20 @@
 import type {
   Directory,
-  JacksonOption,
-  SAMLSSORecord,
-  EventType,
-  SSOConnectionEventType,
   EventData,
-  Webhook,
   EventPayloadSchema,
+  EventType,
+  JacksonOption,
   OIDCSSORecord,
+  SAMLSSORecord,
+  SSOConnectionEventType,
+  Webhook,
 } from '../typings';
-import { sendPayloadToWebhook } from './webhook';
 import {
-  transformSAMLSSOConnection,
   transformDirectoryConnection,
   transformOIDCSSOConnection,
+  transformSAMLSSOConnection,
 } from './utils';
+import { sendPayloadToWebhook } from './webhook';
 
 export default class Event {
   private webhook: JacksonOption['webhook'];

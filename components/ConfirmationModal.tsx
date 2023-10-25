@@ -1,8 +1,8 @@
-import Modal from './Modal';
 import { useTranslation } from 'next-i18next';
-import { ButtonOutline } from './ButtonOutline';
-import { ButtonDanger } from './ButtonDanger';
 import { ButtonBase } from './ButtonBase';
+import { ButtonDanger } from './ButtonDanger';
+import { ButtonOutline } from './ButtonOutline';
+import Modal from './Modal';
 
 interface Props {
   visible: boolean;

@@ -1,25 +1,24 @@
 import fs from 'fs';
 import path from 'path';
+import { InputWithCopyButton } from '@components/ClipboardButton';
+import CreateSSOConnection from '@components/setup-link-instructions/CreateSSOConnection';
+import Footer from '@components/setup-link-instructions/Footer';
+import NextButton from '@components/setup-link-instructions/NextButton';
+import PreviousButton from '@components/setup-link-instructions/PreviousButton';
+import SelectIdentityProviders from '@components/setup-link-instructions/SelectIdentityProviders';
+import { ArrowsRightLeftIcon } from '@heroicons/react/24/outline';
+import { identityProviders } from '@lib/constants';
+import { jacksonOptions } from '@lib/env';
+import jackson from '@lib/jackson';
+import mediumZoom from 'medium-zoom';
+import type { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { MDXRemote } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import remarkGfm from 'remark-gfm';
-import mediumZoom from 'medium-zoom';
-import { MDXRemote } from 'next-mdx-remote';
-import { serialize } from 'next-mdx-remote/serialize';
-import type { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { ArrowsRightLeftIcon } from '@heroicons/react/24/outline';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import jackson from '@lib/jackson';
-import { jacksonOptions } from '@lib/env';
-import { identityProviders } from '@lib/constants';
-import Footer from '@components/setup-link-instructions/Footer';
-import NextButton from '@components/setup-link-instructions/NextButton';
-import { InputWithCopyButton } from '@components/ClipboardButton';
-import PreviousButton from '@components/setup-link-instructions/PreviousButton';
-import CreateSSOConnection from '@components/setup-link-instructions/CreateSSOConnection';
-import SelectIdentityProviders from '@components/setup-link-instructions/SelectIdentityProviders';
 
 type NewConnectionProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 

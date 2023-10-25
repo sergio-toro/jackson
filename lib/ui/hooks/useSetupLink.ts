@@ -1,7 +1,7 @@
-import useSWR from 'swr';
 import type { SetupLink } from '@boxyhq/saml-jackson';
-import type { ApiError, ApiSuccess } from 'types';
 import { fetcher } from '@lib/ui/utils';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
 
 const useSetupLink = (setupLinkToken: string) => {
   const url = setupLinkToken ? `/api/setup/${setupLinkToken}` : null;

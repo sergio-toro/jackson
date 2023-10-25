@@ -1,9 +1,9 @@
-import { IDirectorySyncController, Directory } from '../../src/typings';
 import tap from 'tap';
-import users from './data/users';
-import requests from './data/user-requests';
-import { getFakeDirectory } from './data/directories';
+import { Directory, IDirectorySyncController } from '../../src/typings';
 import { jacksonOptions } from '../utils';
+import { getFakeDirectory } from './data/directories';
+import requests from './data/user-requests';
+import users from './data/users';
 
 let directorySync: IDirectorySyncController;
 let directory: Directory;

@@ -1,6 +1,6 @@
+import ConnectionList from '@components/connection/ConnectionList';
 import type { GetServerSidePropsContext, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import ConnectionList from '@components/connection/ConnectionList';
 
 const ConnectionsIndexPageForSettings: NextPage = () => {
   return <ConnectionList isSettingsView />;

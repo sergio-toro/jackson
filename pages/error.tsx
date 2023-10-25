@@ -1,9 +1,9 @@
 import { getErrorCookie } from '@lib/ui/utils';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { GetServerSidePropsContext } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { GetServerSidePropsContext } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 export default function Error() {
   const { t } = useTranslation('common');

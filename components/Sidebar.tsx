@@ -1,16 +1,15 @@
-import HomeIcon from '@heroicons/react/24/outline/HomeIcon';
-import Image from 'next/image';
-import Link from 'next/link';
-import classNames from 'classnames';
-import { useRouter } from 'next/router';
-
-import Logo from '../public/logo.png';
-import { useTranslation } from 'next-i18next';
-import SSOLogo from '@components/logo/SSO';
-import DSyncLogo from '@components/logo/DSync';
 import AuditLogsLogo from '@components/logo/AuditLogs';
+import DSyncLogo from '@components/logo/DSync';
+import SSOLogo from '@components/logo/SSO';
 import Vault from '@components/logo/Vault';
 import { Cog8ToothIcon } from '@heroicons/react/24/outline';
+import HomeIcon from '@heroicons/react/24/outline/HomeIcon';
+import classNames from 'classnames';
+import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Logo from '../public/logo.png';
 
 type SidebarProps = {
   isOpen: boolean;

@@ -1,9 +1,9 @@
 import type {
+  DirectorySyncRequest,
   DirectorySyncResponse,
+  EventCallback,
   IDirectoryGroups,
   IDirectoryUsers,
-  EventCallback,
-  DirectorySyncRequest,
 } from '../typings';
 
 export class RequestHandler {

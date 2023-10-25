@@ -1,8 +1,8 @@
+import ConnectionList from '@components/connection/ConnectionList';
+import useIdpEntityID from '@lib/ui/hooks/useIdpEntityID';
 import type { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import ConnectionList from '@components/connection/ConnectionList';
 import { useRouter } from 'next/router';
-import useIdpEntityID from '@lib/ui/hooks/useIdpEntityID';
 
 const ConnectionsIndexPage: NextPage = () => {
   const router = useRouter();

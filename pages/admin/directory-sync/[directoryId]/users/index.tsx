@@ -1,24 +1,23 @@
-import type { NextPage, GetServerSidePropsContext } from 'next';
-import React from 'react';
+import type { User } from '@boxyhq/saml-jackson';
+import Badge from '@components/Badge';
+import DirectoryTab from '@components/dsync/DirectoryTab';
+import EmptyState from '@components/EmptyState';
+import { LinkBack } from '@components/LinkBack';
+import Loading from '@components/Loading';
+import { NoMoreResults, pageLimit, Pagination } from '@components/Pagination';
+import { errorToast } from '@components/Toaster';
 import EyeIcon from '@heroicons/react/24/outline/EyeIcon';
-import Link from 'next/link';
+import useDirectory from '@lib/ui/hooks/useDirectory';
+import usePaginate from '@lib/ui/hooks/usePaginate';
+import { fetcher } from '@lib/ui/utils';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
+import React from 'react';
 import useSWR from 'swr';
-import type { User } from '@boxyhq/saml-jackson';
-
-import EmptyState from '@components/EmptyState';
-import DirectoryTab from '@components/dsync/DirectoryTab';
-import Badge from '@components/Badge';
 import type { ApiError, ApiSuccess } from 'types';
-import { fetcher } from '@lib/ui/utils';
-import { errorToast } from '@components/Toaster';
-import Loading from '@components/Loading';
-import useDirectory from '@lib/ui/hooks/useDirectory';
-import { Pagination, pageLimit, NoMoreResults } from '@components/Pagination';
-import usePaginate from '@lib/ui/hooks/usePaginate';
-import { LinkBack } from '@components/LinkBack';
 
 const UsersList: NextPage = () => {
   const { t } = useTranslation('common');

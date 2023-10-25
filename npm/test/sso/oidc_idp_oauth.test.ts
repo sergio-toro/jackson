@@ -1,11 +1,11 @@
+import path from 'path';
+import { generators, Issuer } from 'openid-client';
 import sinon from 'sinon';
 import tap from 'tap';
-import { generators, Issuer } from 'openid-client';
-import { IConnectionAPIController, IOAuthController, OAuthReq } from '../../src/typings';
-import { authz_request_oidc_provider, oidc_response, oidc_response_with_error } from './fixture';
 import { JacksonError } from '../../src/controller/error';
+import { IConnectionAPIController, IOAuthController, OAuthReq } from '../../src/typings';
 import { addSSOConnections, jacksonOptions } from '../utils';
-import path from 'path';
+import { authz_request_oidc_provider, oidc_response, oidc_response_with_error } from './fixture';
 
 let connectionAPIController: IConnectionAPIController;
 let oauthController: IOAuthController;

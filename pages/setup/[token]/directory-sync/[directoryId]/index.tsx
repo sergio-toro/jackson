@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
-import React from 'react';
-import { useRouter } from 'next/router';
 import DirectoryInfo from '@components/dsync/DirectoryInfo';
+import type { NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 const DirectoryDetailsPage: NextPage = () => {
   const router = useRouter();

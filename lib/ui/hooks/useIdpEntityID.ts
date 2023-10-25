@@ -1,7 +1,6 @@
-import useSWR from 'swr';
-import { useRouter } from 'next/router';
-
 import { fetcher } from '@lib/ui/utils';
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
 import type { ApiError, ApiSuccess } from 'types';
 
 const useIdpEntityID = (setupLinkToken?: string) => {

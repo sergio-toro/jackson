@@ -1,6 +1,6 @@
+import DirectoryList from '@components/dsync/DirectoryList';
 import type { GetStaticPropsContext, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import DirectoryList from '@components/dsync/DirectoryList';
 
 const DirectoryIndexPage: NextPage = () => {
   return <DirectoryList />;

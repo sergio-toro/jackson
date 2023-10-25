@@ -1,5 +1,5 @@
+import { expect, test } from '@playwright/test';
 import * as jose from 'jose';
-import { test, expect } from '@playwright/test';
 
 test('should return public key in jwk format', async ({ request }) => {
   const response = await request.get('/oauth/jwks');

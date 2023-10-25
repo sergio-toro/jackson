@@ -1,8 +1,8 @@
-import type { NextPage, GetServerSidePropsContext } from 'next';
+import EditDirectory from '@components/dsync/EditDirectory';
+import type { GetServerSidePropsContext, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import EditDirectory from '@components/dsync/EditDirectory';
 
 const DirectoryEditPage: NextPage = () => {
   const router = useRouter();

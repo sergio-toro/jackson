@@ -1,7 +1,7 @@
-import useSWR from 'swr';
 import type { Directory } from '@boxyhq/saml-jackson';
-import type { ApiError, ApiSuccess } from 'types';
 import { fetcher } from '@lib/ui/utils';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
 
 const useDirectory = (directoryId: string, setupLinkToken?: string) => {
   const url = setupLinkToken

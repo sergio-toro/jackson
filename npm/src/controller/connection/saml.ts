@@ -1,4 +1,7 @@
 import crypto from 'crypto';
+import saml20 from '@boxyhq/saml20';
+import axios from 'axios';
+import * as dbutils from '../../db/utils';
 import {
   IConnectionAPIController,
   SAMLSSOConnectionWithEncodedMetadata,
@@ -7,19 +10,16 @@ import {
   Storable,
   UpdateSAMLConnectionParams,
 } from '../../typings';
-import * as dbutils from '../../db/utils';
+import { JacksonError } from '../error';
 import {
   extractHostName,
   extractRedirectUrls,
   IndexNames,
-  validateSSOConnection,
-  validateRedirectUrl,
-  validateTenantAndProduct,
   isLocalhost,
+  validateRedirectUrl,
+  validateSSOConnection,
+  validateTenantAndProduct,
 } from '../utils';
-import saml20 from '@boxyhq/saml20';
-import { JacksonError } from '../error';
-import axios from 'axios';
 
 async function fetchMetadata(resource: string) {
   try {

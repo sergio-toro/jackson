@@ -8,29 +8,25 @@ import {
   SortOrder,
   Storable,
 } from '../typings';
+import dynamodb from './dynamoDb';
 import * as encrypter from './encrypter';
 import mem from './mem';
 import mongo from './mongo';
+import { JacksonIndex as JacksonIndexPlanetscale } from './planetscale/entity/JacksonIndex';
+import { JacksonStore as JacksonStorePlanetscale } from './planetscale/entity/JacksonStore';
+import { JacksonTTL as JacksonTTLPlanetscale } from './planetscale/entity/JacksonTTL';
 import redis from './redis';
+import { JacksonIndex } from './sql/entity/JacksonIndex';
+import { JacksonStore } from './sql/entity/JacksonStore';
+import { JacksonTTL } from './sql/entity/JacksonTTL';
+import { JacksonIndex as JacksonIndexMariaDB } from './sql/mariadb/entity/JacksonIndex';
+import { JacksonStore as JacksonStoreMariaDB } from './sql/mariadb/entity/JacksonStore';
+import { JacksonTTL as JacksonTTLMariaDB } from './sql/mariadb/entity/JacksonTTL';
+import { JacksonIndex as JacksonIndexMSSQL } from './sql/mssql/entity/JacksonIndex';
+import { JacksonStore as JacksonStoreMSSQL } from './sql/mssql/entity/JacksonStore';
+import { JacksonTTL as JacksonTTLMSSQL } from './sql/mssql/entity/JacksonTTL';
 import sql from './sql/sql';
 import store from './store';
-import dynamodb from './dynamoDb';
-
-import { JacksonStore } from './sql/entity/JacksonStore';
-import { JacksonIndex } from './sql/entity/JacksonIndex';
-import { JacksonTTL } from './sql/entity/JacksonTTL';
-
-import { JacksonStore as JacksonStorePlanetscale } from './planetscale/entity/JacksonStore';
-import { JacksonIndex as JacksonIndexPlanetscale } from './planetscale/entity/JacksonIndex';
-import { JacksonTTL as JacksonTTLPlanetscale } from './planetscale/entity/JacksonTTL';
-
-import { JacksonStore as JacksonStoreMSSQL } from './sql/mssql/entity/JacksonStore';
-import { JacksonIndex as JacksonIndexMSSQL } from './sql/mssql/entity/JacksonIndex';
-import { JacksonTTL as JacksonTTLMSSQL } from './sql/mssql/entity/JacksonTTL';
-
-import { JacksonStore as JacksonStoreMariaDB } from './sql/mariadb/entity/JacksonStore';
-import { JacksonIndex as JacksonIndexMariaDB } from './sql/mariadb/entity/JacksonIndex';
-import { JacksonTTL as JacksonTTLMariaDB } from './sql/mariadb/entity/JacksonTTL';
 
 const decrypt = (res: Encrypted, encryptionKey: EncryptionKey): unknown => {
   if (res.iv && res.tag) {

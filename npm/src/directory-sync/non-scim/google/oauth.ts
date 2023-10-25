@@ -1,6 +1,5 @@
-import { OAuth2Client, Credentials } from 'google-auth-library';
-
-import { JacksonError, apiError } from '../../../controller/error';
+import { Credentials, OAuth2Client } from 'google-auth-library';
+import { apiError, JacksonError } from '../../../controller/error';
 import type { Directory, IDirectoryConfig, JacksonOption, Response } from '../../../typings';
 
 const scope = [

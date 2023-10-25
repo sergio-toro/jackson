@@ -1,8 +1,7 @@
-import type { JacksonOption } from '../typings';
-
 import saml20 from '@boxyhq/saml20';
 import xmlbuilder from 'xmlbuilder';
 import { getDefaultCertificate } from '../saml/x509';
+import type { JacksonOption } from '../typings';
 
 // Service Provider SAML Configuration
 export class SPSAMLConfig {

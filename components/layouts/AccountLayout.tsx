@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { useSession } from 'next-auth/react';
-import Head from 'next/head';
-
-import { Sidebar } from '@components/Sidebar';
-import { Navbar } from '@components/Navbar';
-import { useTranslation } from 'next-i18next';
 import Loading from '@components/Loading';
+import { Navbar } from '@components/Navbar';
+import { Sidebar } from '@components/Sidebar';
+import { useSession } from 'next-auth/react';
+import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
+import React, { useState } from 'react';
 
 export const AccountLayout = ({ children }: { children: React.ReactNode }) => {
   const { t } = useTranslation('common');

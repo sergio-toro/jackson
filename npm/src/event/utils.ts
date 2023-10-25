@@ -1,12 +1,12 @@
+import { findFriendlyProviderName } from '../controller/utils';
 import type {
   Directory,
   DsyncConnectionEventData,
-  SAMLSSOConnectionEventData,
   OIDCSSOConnectionEventData,
-  SAMLSSORecord,
   OIDCSSORecord,
+  SAMLSSOConnectionEventData,
+  SAMLSSORecord,
 } from '../typings';
-import { findFriendlyProviderName } from '../controller/utils';
 
 export const transformSAMLSSOConnection = (data: SAMLSSORecord): SAMLSSOConnectionEventData => {
   const { name, description, clientID, clientSecret, idpMetadata } = data;

@@ -1,11 +1,10 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import type { NextPage } from 'next';
+import EmptyState from '@components/EmptyState';
 import BlocklyComponent, { Block } from '@components/terminus/Blockly';
-
 import '@components/terminus/blocks/customblocks';
 import '@components/terminus/blocks/generator';
-import EmptyState from '@components/EmptyState';
 import { terminusOptions } from '@lib/env';
+import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export interface Props {
   host?: string;

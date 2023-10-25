@@ -1,10 +1,10 @@
 import EventController from '../event';
 import type {
   Directory,
-  DirectorySyncEventType,
-  SAMLSSORecord,
-  OIDCSSORecord,
   DirectorySyncEventData,
+  DirectorySyncEventType,
+  OIDCSSORecord,
+  SAMLSSORecord,
 } from '../typings';
 
 export type IEventController = InstanceType<typeof EventController>;

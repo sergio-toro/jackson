@@ -1,27 +1,29 @@
 import crypto from 'crypto';
 import { promises as fs } from 'fs';
-import * as utils from '../../src/controller/utils';
 import path from 'path';
-import {
-  IOAuthController,
-  IConnectionAPIController,
-  OAuthTokenReq,
-  SAMLResponsePayload,
-  OAuthReq,
-} from '../../src/typings';
+import saml from '@boxyhq/saml20';
+import * as jose from 'jose';
 import sinon from 'sinon';
 import tap from 'tap';
 import { JacksonError } from '../../src/controller/error';
-import saml from '@boxyhq/saml20';
-import * as jose from 'jose';
+import * as utils from '../../src/controller/utils';
+import {
+  IConnectionAPIController,
+  IOAuthController,
+  OAuthReq,
+  OAuthTokenReq,
+  SAMLResponsePayload,
+} from '../../src/typings';
+import { addSSOConnections, jacksonOptions } from '../utils';
+import boxyhq from './data/metadata/boxyhq';
 import {
   authz_request_normal,
-  authz_request_with_forceauthn,
   authz_request_normal_oidc_flow,
   authz_request_normal_with_access_type,
   authz_request_normal_with_code_challenge,
   authz_request_normal_with_resource,
   authz_request_normal_with_scope,
+  authz_request_with_forceauthn,
   bodyWithDummyCredentials,
   bodyWithInvalidClientSecret,
   bodyWithInvalidCode,
@@ -35,16 +37,14 @@ import {
   response_type_not_code,
   state_not_set,
   token_req_cv_mismatch,
-  token_req_encoded_client_id,
   token_req_dummy_client_id_idp_saml_login,
+  token_req_dummy_client_id_idp_saml_login_wrong_secretverifier,
+  token_req_encoded_client_id,
+  token_req_encoded_client_id_idp_saml_login,
+  token_req_encoded_client_id_idp_saml_login_wrong_secretverifier,
   token_req_unencoded_client_id_gen,
   token_req_with_cv,
-  token_req_encoded_client_id_idp_saml_login,
-  token_req_dummy_client_id_idp_saml_login_wrong_secretverifier,
-  token_req_encoded_client_id_idp_saml_login_wrong_secretverifier,
 } from './fixture';
-import { addSSOConnections, jacksonOptions } from '../utils';
-import boxyhq from './data/metadata/boxyhq';
 
 let connectionAPIController: IConnectionAPIController;
 let oauthController: IOAuthController;

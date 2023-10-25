@@ -1,16 +1,15 @@
-import type {
-  Storable,
-  JacksonOption,
-  SAMLFederationApp,
-  Records,
-  GetByProductParams,
-  AppRequestParams,
-} from '../../typings';
-import { appID } from '../../controller/utils';
-import { createMetadataXML } from '../../saml/lib';
 import { JacksonError } from '../../controller/error';
+import { appID, IndexNames, validateTenantAndProduct } from '../../controller/utils';
+import { createMetadataXML } from '../../saml/lib';
 import { getDefaultCertificate } from '../../saml/x509';
-import { IndexNames, validateTenantAndProduct } from '../../controller/utils';
+import type {
+  AppRequestParams,
+  GetByProductParams,
+  JacksonOption,
+  Records,
+  SAMLFederationApp,
+  Storable,
+} from '../../typings';
 import { throwIfInvalidLicense } from '../common/checkLicense';
 
 type NewAppParams = Pick<SAMLFederationApp, 'name' | 'tenant' | 'product' | 'acsUrl' | 'entityId'> & {

@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import type { Directory } from '@boxyhq/saml-jackson';
 import classNames from 'classnames';
+import Link from 'next/link';
 
 const DirectoryTab = ({
   directory,

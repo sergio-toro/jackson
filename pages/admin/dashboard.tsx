@@ -1,6 +1,5 @@
-import type { GetServerSidePropsContext, NextPage } from 'next';
-
 import WellKnownURLs from '@components/connection/WellKnownURLs';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Dashboard: NextPage = () => {

@@ -1,6 +1,5 @@
 // This is an in-memory implementation to be used with testing and prototyping only
-
-import { DatabaseDriver, DatabaseOption, Index, Encrypted, Records, SortOrder } from '../typings';
+import { DatabaseDriver, DatabaseOption, Encrypted, Index, Records, SortOrder } from '../typings';
 import * as dbutils from './utils';
 
 class Mem implements DatabaseDriver {

@@ -1,10 +1,9 @@
 import axios from 'axios';
-
-import type { AdminToken } from 'types/retraced';
-import { retracedOptions } from './env';
-import { getToken as getNextAuthToken } from 'next-auth/jwt';
 import type { NextApiRequest } from 'next';
+import { getToken as getNextAuthToken } from 'next-auth/jwt';
+import type { AdminToken } from 'types/retraced';
 import { sessionName } from './constants';
+import { retracedOptions } from './env';
 
 export const getToken = async (req: NextApiRequest): Promise<AdminToken> => {
   const token = await getNextAuthToken({

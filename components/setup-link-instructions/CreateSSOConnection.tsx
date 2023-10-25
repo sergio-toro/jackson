@@ -1,8 +1,6 @@
-import { useRouter } from 'next/router';
-
-import { CreateSAMLConnection as CreateSAML, CreateOIDCConnection as CreateOIDC } from '@boxyhq/react-ui/sso';
-
+import { CreateOIDCConnection as CreateOIDC, CreateSAMLConnection as CreateSAML } from '@boxyhq/react-ui/sso';
 import { errorToast } from '@components/Toaster';
+import { useRouter } from 'next/router';
 
 interface CreateSSOConnectionProps {
   setupLinkToken: string;

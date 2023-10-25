@@ -1,11 +1,11 @@
+import type { Directory } from '@boxyhq/saml-jackson';
+import { ButtonDanger } from '@components/ButtonDanger';
+import ConfirmationModal from '@components/ConfirmationModal';
+import { errorToast, successToast } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { useTranslation } from 'next-i18next';
-import type { Directory } from '@boxyhq/saml-jackson';
 import type { ApiResponse } from 'types';
-import { errorToast, successToast } from '@components/Toaster';
-import ConfirmationModal from '@components/ConfirmationModal';
-import { ButtonDanger } from '@components/ButtonDanger';
 
 export const DeleteDirectory = ({ directoryId }: { directoryId: Directory['id'] }) => {
   const { t } = useTranslation('common');

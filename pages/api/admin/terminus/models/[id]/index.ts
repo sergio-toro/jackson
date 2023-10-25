@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
 import { terminusOptions } from '@lib/env';
+import axios from 'axios';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;

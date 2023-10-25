@@ -1,9 +1,9 @@
-import type { NextRequest } from 'next/server';
-import { NextResponse } from 'next/server';
-import { validateApiKey, extractAuthToken } from '@lib/auth';
-import { getToken } from 'next-auth/jwt';
+import { extractAuthToken, validateApiKey } from '@lib/auth';
 import { sessionName } from '@lib/constants';
 import micromatch from 'micromatch';
+import { getToken } from 'next-auth/jwt';
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
 // Add API routes that don't require authentication
 const unAuthenticatedApiRoutes = [

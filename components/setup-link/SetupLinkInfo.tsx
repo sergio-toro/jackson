@@ -1,8 +1,8 @@
-import { useTranslation } from 'next-i18next';
 import { SetupLink } from '@boxyhq/saml-jackson';
-import Modal from '@components/Modal';
 import { ButtonOutline } from '@components/ButtonOutline';
 import { InputWithCopyButton } from '@components/ClipboardButton';
+import Modal from '@components/Modal';
+import { useTranslation } from 'next-i18next';
 
 type SetupLinkInfoProps = {
   setupLink: SetupLink | null;

@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import * as Retraced from '@retracedhq/retraced';
-
 import { retracedOptions } from '@lib/env';
+import * as Retraced from '@retracedhq/retraced';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;

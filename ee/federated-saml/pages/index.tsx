@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
 import type { SAMLFederationApp } from '@boxyhq/saml-jackson';
-import useSWR from 'swr';
-import { useTranslation } from 'next-i18next';
-import type { ApiError, ApiSuccess } from 'types';
-import { fetcher } from '@lib/ui/utils';
-import Loading from '@components/Loading';
 import EmptyState from '@components/EmptyState';
-import { LinkPrimary } from '@components/LinkPrimary';
-import { pageLimit, Pagination, NoMoreResults } from '@components/Pagination';
-import usePaginate from '@lib/ui/hooks/usePaginate';
-import { LinkOutline } from '@components/LinkOutline';
 import { IconButton } from '@components/IconButton';
+import LicenseRequired from '@components/LicenseRequired';
+import { LinkOutline } from '@components/LinkOutline';
+import { LinkPrimary } from '@components/LinkPrimary';
+import Loading from '@components/Loading';
+import { NoMoreResults, pageLimit, Pagination } from '@components/Pagination';
+import { errorToast } from '@components/Toaster';
 import PencilIcon from '@heroicons/react/24/outline/PencilIcon';
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon';
+import usePaginate from '@lib/ui/hooks/usePaginate';
+import { fetcher } from '@lib/ui/utils';
+import { useTranslation } from 'next-i18next';
 import router from 'next/router';
-import LicenseRequired from '@components/LicenseRequired';
-import { errorToast } from '@components/Toaster';
+import { useEffect } from 'react';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
 
 const AppsList = ({ hasValidLicense }: { hasValidLicense: boolean }) => {
   const { t } = useTranslation('common');

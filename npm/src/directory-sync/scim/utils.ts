@@ -1,7 +1,6 @@
 import lodash from 'lodash';
-
 import { DirectorySyncProviders } from '../../typings';
-import type { DirectoryType, User, UserPatchOperation, GroupPatchOperation } from '../../typings';
+import type { DirectoryType, GroupPatchOperation, User, UserPatchOperation } from '../../typings';
 
 export const parseGroupOperation = (operation: GroupPatchOperation) => {
   const { op, path, value } = operation;

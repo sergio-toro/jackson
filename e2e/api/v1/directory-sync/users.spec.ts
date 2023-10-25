@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import users from '../../../../npm/test/dsync/data/users';
 import { createDirectory, deleteDirectory, directoryPayload, getDirectory } from '../../helpers/directories';
 import { createUser } from '../../helpers/users';

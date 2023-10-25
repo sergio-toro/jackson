@@ -1,9 +1,9 @@
-import { IDirectorySyncController, Directory, DirectorySyncEvent } from '../../src/typings';
 import tap from 'tap';
-import groups from './data/groups';
-import { default as groupsRequest } from './data/group-requests';
-import { getFakeDirectory } from './data/directories';
+import { Directory, DirectorySyncEvent, IDirectorySyncController } from '../../src/typings';
 import { jacksonOptions } from '../utils';
+import { getFakeDirectory } from './data/directories';
+import { default as groupsRequest } from './data/group-requests';
+import groups from './data/groups';
 
 let directorySync: IDirectorySyncController;
 let directory: Directory;

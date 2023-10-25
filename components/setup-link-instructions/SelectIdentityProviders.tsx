@@ -1,6 +1,5 @@
-import { useRouter } from 'next/router';
-
 import { identityProviders } from '@lib/constants';
+import { useRouter } from 'next/router';
 
 const SelectIdentityProviders = () => {
   const router = useRouter();

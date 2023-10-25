@@ -1,26 +1,25 @@
+import type { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
+import { ButtonDanger } from '@components/ButtonDanger';
+import { ButtonPrimary } from '@components/ButtonPrimary';
+import ConfirmationModal from '@components/ConfirmationModal';
+import { LinkBack } from '@components/LinkBack';
+import { errorToast, successToast } from '@components/Toaster';
+import { isObjectEmpty } from '@lib/ui/utils';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { mutate } from 'swr';
-
-import ConfirmationModal from '@components/ConfirmationModal';
+import { ApiResponse } from 'types';
+import { ToggleConnectionStatus } from './ToggleConnectionStatus';
 import {
-  saveConnection,
+  excludeFallback,
   fieldCatalogFilterByConnection,
   renderFieldList,
+  saveConnection,
   useFieldCatalog,
-  type FormObj,
   type FieldCatalogItem,
-  excludeFallback,
+  type FormObj,
 } from './utils';
-import { ApiResponse } from 'types';
-import { errorToast, successToast } from '@components/Toaster';
-import { useTranslation } from 'next-i18next';
-import { LinkBack } from '@components/LinkBack';
-import { ButtonPrimary } from '@components/ButtonPrimary';
-import { ButtonDanger } from '@components/ButtonDanger';
-import { isObjectEmpty } from '@lib/ui/utils';
-import { ToggleConnectionStatus } from './ToggleConnectionStatus';
-import type { OIDCSSORecord, SAMLSSORecord } from '@boxyhq/saml-jackson';
 
 function getInitialState(connection, fieldCatalog: FieldCatalogItem[], connectionType) {
   const _state = {};

@@ -1,14 +1,14 @@
-import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useProject, useGroups } from '@lib/ui/retraced';
-import Loading from '@components/Loading';
 import ErrorMessage from '@components/Error';
 import { LinkBack } from '@components/LinkBack';
-import { Select } from 'react-daisyui';
+import Loading from '@components/Loading';
 import { retracedOptions } from '@lib/env';
+import { useGroups, useProject } from '@lib/ui/retraced';
+import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { Select } from 'react-daisyui';
 
 const LogsViewer = dynamic(() => import('@components/retraced/LogsViewer'), {
   ssr: false,

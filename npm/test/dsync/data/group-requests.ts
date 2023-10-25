@@ -1,4 +1,4 @@
-import type { DirectorySyncRequest, Directory, Group } from '../../../src/typings';
+import type { Directory, DirectorySyncRequest, Group } from '../../../src/typings';
 
 const requests = {
   // Create a group

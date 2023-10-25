@@ -1,11 +1,11 @@
-import type { NextPage, InferGetStaticPropsType } from 'next';
+import { InputWithCopyButton } from '@components/ClipboardButton';
+import { Toaster } from '@components/Toaster';
+import jackson from '@lib/jackson';
+import type { InferGetStaticPropsType, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import React from 'react';
-import { useTranslation } from 'next-i18next';
-import jackson from '@lib/jackson';
-import { InputWithCopyButton } from '@components/ClipboardButton';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { Toaster } from '@components/Toaster';
 
 const SPConfig: NextPage<InferGetStaticPropsType<typeof getServerSideProps>> = ({ config }) => {
   const { t } = useTranslation('common');

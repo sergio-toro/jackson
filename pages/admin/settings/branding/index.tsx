@@ -1,6 +1,5 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
 import jackson from '@lib/jackson';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export { default } from 'ee/branding/pages/index';
 

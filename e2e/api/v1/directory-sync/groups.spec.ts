@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { createDirectory, deleteDirectory, directoryPayload, getDirectory } from '../../helpers/directories';
 import groups from '@boxyhq/saml-jackson/test/dsync/data/groups';
+import { expect, test } from '@playwright/test';
+import { createDirectory, deleteDirectory, directoryPayload, getDirectory } from '../../helpers/directories';
 import { createGroup } from '../../helpers/groups';
 
 test.use({

@@ -7,5 +7,6 @@ module.exports = {
   semi: true,
   printWidth: 110,
   arrowParens: 'always',
-  // importOrderSeparation: true,
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
 };

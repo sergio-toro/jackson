@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test('should return oidc discovery configuration', async ({ request, baseURL }) => {
   const response = await request.get('/.well-known/openid-configuration');

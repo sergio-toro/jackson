@@ -1,6 +1,5 @@
 import {
   BatchWriteItemCommand,
-  WriteRequest,
   CreateTableCommand,
   DeleteItemCommand,
   DynamoDBClient,
@@ -8,8 +7,9 @@ import {
   PutItemCommand,
   QueryCommand,
   UpdateTimeToLiveCommand,
+  WriteRequest,
 } from '@aws-sdk/client-dynamodb';
-import { marshall, unmarshall, NativeAttributeValue } from '@aws-sdk/util-dynamodb';
+import { marshall, NativeAttributeValue, unmarshall } from '@aws-sdk/util-dynamodb';
 import { DatabaseDriver, DatabaseOption, Encrypted, Index, Records } from '../typings';
 import * as dbutils from './utils';
 

@@ -1,5 +1,5 @@
-import { Directory, DirectoryType } from '../../../src/typings';
 import { faker } from '@faker-js/faker';
+import { Directory, DirectoryType } from '../../../src/typings';
 
 export const getFakeDirectory = () => {
   return {

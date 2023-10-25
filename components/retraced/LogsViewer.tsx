@@ -1,11 +1,10 @@
-import RetracedEventsBrowser from '@retracedhq/logs-viewer';
-import useSWR from 'swr';
-
-import type { ApiError, ApiSuccess } from 'types';
-import type { Project } from 'types/retraced';
 import ErrorMessage from '@components/Error';
 import Loading from '@components/Loading';
 import { fetcher } from '@lib/ui/utils';
+import RetracedEventsBrowser from '@retracedhq/logs-viewer';
+import useSWR from 'swr';
+import type { ApiError, ApiSuccess } from 'types';
+import type { Project } from 'types/retraced';
 
 const LogsViewer = (props: { project: Project; environmentId: string; groupId: string; host: string }) => {
   const { project, environmentId, groupId, host } = props;

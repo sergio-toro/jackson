@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import ProjectDetails from '@components/retraced/ProjectDetails';
-import { useProject } from '@lib/ui/retraced';
-import Loading from '@components/Loading';
 import ErrorMessage from '@components/Error';
 import { LinkBack } from '@components/LinkBack';
+import Loading from '@components/Loading';
+import ProjectDetails from '@components/retraced/ProjectDetails';
 import { retracedOptions } from '@lib/env';
+import { useProject } from '@lib/ui/retraced';
+import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 
 export interface Props {
   host?: string;

@@ -1,9 +1,9 @@
-import type { Project } from 'types/retraced';
+import { InputWithCopyButton } from '@components/ClipboardButton';
 import CodeSnippet from '@components/retraced/CodeSnippet';
+import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 import { Select } from 'react-daisyui';
-import { InputWithCopyButton } from '@components/ClipboardButton';
-import { useTranslation } from 'next-i18next';
+import type { Project } from 'types/retraced';
 
 const ProjectDetails = (props: { project: Project; host?: string }) => {
   const { t } = useTranslation('common');

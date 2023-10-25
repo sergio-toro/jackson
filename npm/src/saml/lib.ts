@@ -1,10 +1,10 @@
 import crypto from 'crypto';
-import xml2js from 'xml2js';
-import { inflateRaw } from 'zlib';
 import { promisify } from 'util';
+import { inflateRaw } from 'zlib';
 import saml from '@boxyhq/saml20';
-import xmlbuilder from 'xmlbuilder';
 import type { SAMLProfile } from '@boxyhq/saml20/dist/typings';
+import xml2js from 'xml2js';
+import xmlbuilder from 'xmlbuilder';
 import * as dbutils from '../db/utils';
 import claims from '../saml/claims';
 

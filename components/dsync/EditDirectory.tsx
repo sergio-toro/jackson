@@ -1,15 +1,15 @@
-import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'next-i18next';
 import type { Directory } from '@boxyhq/saml-jackson';
-import type { ApiResponse } from 'types';
-import { errorToast, successToast } from '@components/Toaster';
-import { LinkBack } from '@components/LinkBack';
 import { ButtonPrimary } from '@components/ButtonPrimary';
+import { LinkBack } from '@components/LinkBack';
 import Loading from '@components/Loading';
+import { errorToast, successToast } from '@components/Toaster';
 import useDirectory from '@lib/ui/hooks/useDirectory';
-import { ToggleConnectionStatus } from './ToggleConnectionStatus';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import type { ApiResponse } from 'types';
 import { DeleteDirectory } from './DeleteDirectory';
+import { ToggleConnectionStatus } from './ToggleConnectionStatus';
 
 type FormState = Pick<Directory, 'name' | 'log_webhook_events' | 'webhook' | 'google_domain'>;
 

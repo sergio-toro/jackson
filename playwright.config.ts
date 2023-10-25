@@ -1,5 +1,5 @@
-import { PlaywrightTestConfig, devices } from '@playwright/test';
 import path from 'path';
+import { devices, PlaywrightTestConfig } from '@playwright/test';
 
 // Reference: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {

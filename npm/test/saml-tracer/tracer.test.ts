@@ -1,7 +1,7 @@
 import tap from 'tap';
+import DB from '../../src/db/db';
 import SAMLTracer from '../../src/saml-tracer';
 import { jacksonOptions } from '../utils';
-import DB from '../../src/db/db';
 
 let samlTracer: SAMLTracer;
 const INTERVAL_1_WEEK_MS = 7 * 24 * 60 * 60 * 1000;

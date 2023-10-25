@@ -1,13 +1,13 @@
-import { FormEvent, useState } from 'react';
+import type { SetupLink, SetupLinkService } from '@boxyhq/saml-jackson';
 import ConfirmationModal from '@components/ConfirmationModal';
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
 import { errorToast, successToast } from '@components/Toaster';
-import { ButtonPrimary } from '../ButtonPrimary';
-import { LinkBack } from '../LinkBack';
-import { InputWithCopyButton } from '../ClipboardButton';
-import type { SetupLinkService, SetupLink } from '@boxyhq/saml-jackson';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { FormEvent, useState } from 'react';
 import type { ApiResponse } from 'types';
+import { ButtonPrimary } from '../ButtonPrimary';
+import { InputWithCopyButton } from '../ClipboardButton';
+import { LinkBack } from '../LinkBack';
 
 const CreateSetupLink = ({ service }: { service: SetupLinkService }) => {
   const router = useRouter();

@@ -1,17 +1,17 @@
 import { generators } from 'openid-client';
 import {
-  OIDCAuthzResponsePayload,
   OAuthReqBody,
   OAuthReqBodyWithAccessType,
   OAuthReqBodyWithClientId,
   OAuthReqBodyWithResource,
   OAuthTokenReq,
+  OIDCAuthzResponsePayload,
 } from '../../src';
 import boxyhq from './data/metadata/boxyhq';
-import boxyhqNobinding from './data/metadata/nobinding/boxyhq-nobinding';
-import boxyhqNoentityID from './data/metadata/noentityID/boxyhq-noentityID';
 import exampleOidc from './data/metadata/example.oidc';
 import invalidssodescriptor from './data/metadata/invalidSSODescriptor/invalidssodescriptor';
+import boxyhqNobinding from './data/metadata/nobinding/boxyhq-nobinding';
+import boxyhqNoentityID from './data/metadata/noentityID/boxyhq-noentityID';
 
 // BEGIN: Fixtures for authorize
 export const authz_request_normal: Partial<OAuthReqBodyWithClientId> = {

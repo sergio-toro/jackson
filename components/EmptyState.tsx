@@ -1,7 +1,7 @@
+import { LinkPrimary } from '@components/LinkPrimary';
 import InformationCircleIcon from '@heroicons/react/24/outline/InformationCircleIcon';
 import PlusIcon from '@heroicons/react/24/outline/PlusIcon';
 import { useTranslation } from 'next-i18next';
-import { LinkPrimary } from '@components/LinkPrimary';
 
 const EmptyState = ({
   title,

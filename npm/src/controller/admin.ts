@@ -1,10 +1,10 @@
 import {
   IAdminController,
-  Storable,
-  SAMLSSORecord,
   OIDCSSORecord,
-  SAMLTracerInstance,
   Records,
+  SAMLSSORecord,
+  SAMLTracerInstance,
+  Storable,
   Trace,
 } from '../typings';
 import { JacksonError } from './error';

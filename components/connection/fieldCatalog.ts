@@ -6,7 +6,6 @@
  * `fallback` - use this key to activate a fallback catalog item that will take in the values. The fallback will be activated
  *  by means of a switch control in the UI that allows us to deactivate the fallback catalog item and revert to the main field.
  */
-
 import type { FieldCatalogItem } from './utils';
 
 export const getCommonFields = ({

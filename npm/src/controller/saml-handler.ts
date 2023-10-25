@@ -1,17 +1,15 @@
-import saml from '@boxyhq/saml20';
 import crypto from 'crypto';
 import { promisify } from 'util';
 import { deflateRaw } from 'zlib';
+import saml from '@boxyhq/saml20';
 import type { SAMLProfile } from '@boxyhq/saml20/dist/typings';
-
-import type { JacksonOption, Storable, SAMLSSORecord, OIDCSSORecord } from '../typings';
-import { getDefaultCertificate } from '../saml/x509';
 import * as dbutils from '../db/utils';
-import { JacksonError } from './error';
-import { IndexNames } from './utils';
-import { relayStatePrefix } from './utils';
 import { createSAMLResponse } from '../saml/lib';
+import { getDefaultCertificate } from '../saml/x509';
+import type { JacksonOption, OIDCSSORecord, SAMLSSORecord, Storable } from '../typings';
+import { JacksonError } from './error';
 import * as redirect from './oauth/redirect';
+import { IndexNames, relayStatePrefix } from './utils';
 
 const deflateRawAsync = promisify(deflateRaw);
 

@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
-
-import { getToken } from '@lib/retraced';
 import { retracedOptions } from '@lib/env';
+import { getToken } from '@lib/retraced';
+import axios from 'axios';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;

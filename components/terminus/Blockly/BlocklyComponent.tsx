@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
-import styles from './BlocklyComponent.module.css';
-import { useEffect, useRef, createRef } from 'react';
-import { useTranslation } from 'next-i18next';
-
-import Blockly from 'blockly/core';
-import 'blockly/blocks';
-import { maskSetup } from '@components/terminus/blocks/customblocks';
-import locale from 'blockly/msg/en';
-Blockly.setLocale(locale);
-
+import { ButtonBase } from '@components/ButtonBase';
 import { ButtonPrimary } from '@components/ButtonPrimary';
+import ConfirmationModal from '@components/ConfirmationModal';
+import { maskSetup } from '@components/terminus/blocks/customblocks';
 import { generateModel } from '@components/terminus/blocks/generator';
 import { errorToast, successToast } from '@components/Toaster';
-import ConfirmationModal from '@components/ConfirmationModal';
-import { ButtonBase } from '@components/ButtonBase';
+import styles from './BlocklyComponent.module.css';
+import 'blockly/blocks';
+import Blockly from 'blockly/core';
+import locale from 'blockly/msg/en';
+import { useTranslation } from 'next-i18next';
+import React, { createRef, useEffect, useRef, useState } from 'react';
+
+Blockly.setLocale(locale);
 
 function BlocklyComponent(props) {
   const { t } = useTranslation('common');

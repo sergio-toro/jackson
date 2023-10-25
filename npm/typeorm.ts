@@ -1,6 +1,7 @@
-require('reflect-metadata');
-import { DataSource, DatabaseType, DataSourceOptions } from 'typeorm';
+import { DatabaseType, DataSource, DataSourceOptions } from 'typeorm';
 import * as mssql from './src/db/sql/mssql';
+
+require('reflect-metadata');
 
 const type =
   process.env.DB_ENGINE === 'planetscale'

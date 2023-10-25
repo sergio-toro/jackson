@@ -1,6 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
 import jackson from '@lib/jackson';
+import { NextApiRequest, NextApiResponse } from 'next';
 import packageInfo from '../../package.json';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -1,9 +1,8 @@
 import tap from 'tap';
-
 import { ISAMLFederationController } from '../../src';
-import { jacksonOptions } from '../utils';
-import { tenant, product, serviceProvider, appId } from './constants';
 import { getDefaultCertificate } from '../../src/saml/x509';
+import { jacksonOptions } from '../utils';
+import { appId, product, serviceProvider, tenant } from './constants';
 
 let samlFederatedController: ISAMLFederationController;
 

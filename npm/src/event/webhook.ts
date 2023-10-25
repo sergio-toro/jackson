@@ -1,5 +1,5 @@
-import type { EventPayloadSchema, Webhook } from '../typings';
 import crypto from 'crypto';
+import type { EventPayloadSchema, Webhook } from '../typings';
 import axios from './axios';
 
 export const createSignatureString = (secret: string, payload: EventPayloadSchema) => {

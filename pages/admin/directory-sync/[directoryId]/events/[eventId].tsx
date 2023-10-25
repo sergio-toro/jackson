@@ -1,19 +1,18 @@
-import type { NextPage, GetServerSidePropsContext } from 'next';
+import type { WebhookEventLog } from '@boxyhq/saml-jackson';
+import DirectoryTab from '@components/dsync/DirectoryTab';
+import { LinkBack } from '@components/LinkBack';
+import Loading from '@components/Loading';
+import { errorToast } from '@components/Toaster';
+import useDirectory from '@lib/ui/hooks/useDirectory';
+import { fetcher } from '@lib/ui/utils';
+import type { GetServerSidePropsContext, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter/dist/cjs';
 import { materialOceanic } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import useSWR from 'swr';
-import type { WebhookEventLog } from '@boxyhq/saml-jackson';
-import { useRouter } from 'next/router';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import DirectoryTab from '@components/dsync/DirectoryTab';
 import type { ApiError, ApiSuccess } from 'types';
-import { fetcher } from '@lib/ui/utils';
-import { errorToast } from '@components/Toaster';
-import Loading from '@components/Loading';
-import useDirectory from '@lib/ui/hooks/useDirectory';
-import { LinkBack } from '@components/LinkBack';
 
 const EventInfo: NextPage = () => {
   const router = useRouter();

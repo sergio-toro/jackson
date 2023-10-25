@@ -1,7 +1,7 @@
-import type { NextPage, GetServerSidePropsContext } from 'next';
+import DirectoryInfo from '@components/dsync/DirectoryInfo';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
-import DirectoryInfo from '@components/dsync/DirectoryInfo';
 
 const DirectoryInfoPage: NextPage = () => {
   const router = useRouter();

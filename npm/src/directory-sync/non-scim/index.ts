@@ -1,15 +1,15 @@
-import { newGoogleProvider } from './google';
 import type {
+  EventCallback,
   IDirectoryConfig,
-  IUsers,
   IGroups,
   IRequestHandler,
+  IUsers,
   JacksonOption,
-  EventCallback,
 } from '../../typings';
-import { SyncUsers } from './syncUsers';
-import { SyncGroups } from './syncGroups';
+import { newGoogleProvider } from './google';
 import { SyncGroupMembers } from './syncGroupMembers';
+import { SyncGroups } from './syncGroups';
+import { SyncUsers } from './syncUsers';
 
 interface SyncParams {
   userController: IUsers;

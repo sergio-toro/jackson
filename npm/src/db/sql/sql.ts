@@ -1,11 +1,11 @@
+import { DataSource, DataSourceOptions, In, IsNull } from 'typeorm';
+import { DatabaseDriver, DatabaseOption, Encrypted, Index, Records, SortOrder } from '../../typings';
+import * as dbutils from '../utils';
+import * as mssql from './mssql';
+
 /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/
 
 require('reflect-metadata');
-
-import { DatabaseDriver, DatabaseOption, Index, Encrypted, Records, SortOrder } from '../../typings';
-import { DataSource, DataSourceOptions, In, IsNull } from 'typeorm';
-import * as dbutils from '../utils';
-import * as mssql from './mssql';
 
 class Sql implements DatabaseDriver {
   private options: DatabaseOption;

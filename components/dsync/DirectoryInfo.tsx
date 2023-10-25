@@ -1,12 +1,12 @@
-import DirectoryTab from './DirectoryTab';
-import { useTranslation } from 'next-i18next';
 import { InputWithCopyButton } from '@components/ClipboardButton';
 import { LinkBack } from '@components/LinkBack';
-import React from 'react';
-import useDirectory from '@lib/ui/hooks/useDirectory';
 import Loading from '@components/Loading';
 import { errorToast } from '@components/Toaster';
 import { dsyncGoogleAuthURL } from '@lib/env';
+import useDirectory from '@lib/ui/hooks/useDirectory';
+import { useTranslation } from 'next-i18next';
+import React from 'react';
+import DirectoryTab from './DirectoryTab';
 
 const DirectoryInfo = ({ directoryId, setupLinkToken }: { directoryId: string; setupLinkToken?: string }) => {
   const { t } = useTranslation('common');

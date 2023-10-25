@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import InvalidSetupLinkAlert from '@components/setup-link/InvalidSetupLinkAlert';
 import Loading from '@components/Loading';
-import useSetupLink from '@lib/ui/hooks/useSetupLink';
-import usePortalBranding from '@lib/ui/hooks/usePortalBranding';
-import { useTranslation } from 'next-i18next';
-import { hexToHsl, darkenHslColor } from '@lib/color';
 import { PoweredBy } from '@components/PoweredBy';
+import InvalidSetupLinkAlert from '@components/setup-link/InvalidSetupLinkAlert';
+import { darkenHslColor, hexToHsl } from '@lib/color';
+import usePortalBranding from '@lib/ui/hooks/usePortalBranding';
+import useSetupLink from '@lib/ui/hooks/useSetupLink';
+import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 export const SetupLinkLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();

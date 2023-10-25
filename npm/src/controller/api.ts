@@ -1,28 +1,28 @@
 import * as dbutils from '../db/utils';
 import * as metrics from '../opentelemetry/metrics';
 import {
+  DelConnectionsQuery,
+  GetByProductParams,
   GetConfigQuery,
   GetConnectionsQuery,
-  DelConnectionsQuery,
+  GetIDPEntityIDBody,
   IConnectionAPIController,
-  Storable,
-  SAMLSSOConnectionWithEncodedMetadata,
-  SAMLSSOConnectionWithRawMetadata,
+  IEventController,
+  JacksonOption,
   OIDCSSOConnectionWithDiscoveryUrl,
   OIDCSSOConnectionWithMetadata,
-  JacksonOption,
-  SAMLSSORecord,
   OIDCSSORecord,
-  GetIDPEntityIDBody,
-  IEventController,
-  UpdateSAMLConnectionParams,
+  SAMLSSOConnectionWithEncodedMetadata,
+  SAMLSSOConnectionWithRawMetadata,
+  SAMLSSORecord,
+  Storable,
   UpdateOIDCConnectionParams,
-  GetByProductParams,
+  UpdateSAMLConnectionParams,
 } from '../typings';
-import { JacksonError } from './error';
-import { IndexNames, appID, transformConnections, transformConnection, isConnectionActive } from './utils';
 import oidcConnection from './connection/oidc';
 import samlConnection from './connection/saml';
+import { JacksonError } from './error';
+import { appID, IndexNames, isConnectionActive, transformConnection, transformConnections } from './utils';
 
 export class ConnectionAPIController implements IConnectionAPIController {
   private connectionStore: Storable;

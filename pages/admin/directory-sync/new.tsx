@@ -1,8 +1,8 @@
-import type { NextPage, InferGetServerSidePropsType, GetServerSidePropsContext } from 'next';
-import React from 'react';
 import CreateDirectory from '@components/dsync/CreateDirectory';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { jacksonOptions } from '@lib/env';
+import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import React from 'react';
 
 const DirectoryCreatePage: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = (props) => {
   const { defaultWebhookEndpoint } = props;

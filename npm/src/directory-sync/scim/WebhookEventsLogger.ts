@@ -1,11 +1,10 @@
 import { randomUUID } from 'crypto';
-
 import type {
-  Directory,
   DatabaseStore,
-  WebhookEventLog,
+  Directory,
   DirectorySyncEvent,
   PaginationParams,
+  WebhookEventLog,
 } from '../../typings';
 import { Base } from './Base';
 

@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import type { DirectorySyncRequest } from '@boxyhq/saml-jackson';
-import jackson from '@lib/jackson';
 import { extractAuthToken } from '@lib/auth';
+import jackson from '@lib/jackson';
 import { bodyParser } from '@lib/utils';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { directorySyncController } = await jackson();

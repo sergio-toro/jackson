@@ -1,9 +1,9 @@
 import type { Directory } from '@boxyhq/saml-jackson';
-import { errorToast, successToast } from '@components/Toaster';
-import { FC, useState, useEffect } from 'react';
-import type { ApiResponse } from 'types';
-import { useTranslation } from 'next-i18next';
 import { ConnectionToggle } from '@components/ConnectionToggle';
+import { errorToast, successToast } from '@components/Toaster';
+import { useTranslation } from 'next-i18next';
+import { FC, useEffect, useState } from 'react';
+import type { ApiResponse } from 'types';
 
 interface Props {
   connection: Directory;
